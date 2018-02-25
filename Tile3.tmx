@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" tiledversion="1.1.2" orientation="orthogonal" renderorder="right-down" width="40" height="40" tilewidth="16" tileheight="16" infinite="0" nextobjectid="1">
- <tileset firstgid="1" source="0x72_16x16DungeonTileset.v4.tsx"/>
- <tileset firstgid="257" source="Open.tsx"/>
- <tileset firstgid="258" source="Door0.tsx"/>
- <tileset firstgid="306" source="0x72_16x16DungeonTileset.v4 (1).tsx"/>
+ <tileset firstgid="1" source="TileSet/0x72_16x16DungeonTileset.v4.tsx"/>
+ <tileset firstgid="257" source="TileSet/Open.tsx"/>
+ <tileset firstgid="258" source="TileSet/Door0.tsx"/>
+ <tileset firstgid="306" source="TileSet/0x72_16x16DungeonTileset.v4 (1).tsx"/>
+ <tileset firstgid="307" name="floor" tilewidth="16" tileheight="16" tilecount="44" columns="4">
+  <image source="TileSet/floor.png" width="64" height="176"/>
+ </tileset>
+ <tileset firstgid="351" name="schifi1" tilewidth="16" tileheight="16" tilecount="1360" columns="34">
+  <image source="TileSet/schifi1.png" width="548" height="638"/>
+ </tileset>
  <layer name="Ground" width="40" height="40">
   <data encoding="csv">
 101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,
