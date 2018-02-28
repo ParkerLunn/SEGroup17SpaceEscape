@@ -17,6 +17,7 @@ public class Status : MonoBehaviour {
     private float petrifyTimeout;
     private float frozen;
     private float onFire;
+    private bool inFire;
     private float fireDmg;
     private float slow;
 
@@ -121,6 +122,16 @@ public class Status : MonoBehaviour {
         {
             lastInterval -= updateInterval;
 
+
+            if (Hp == 0)
+            {
+                if (alive == true)
+                {
+                    Debug.Log("HP is 0!");
+                    alive = false;
+                }
+            }
+            if (alive == false) return;
             if (petrify>0)
             {
                 petrifyTimeout += dt;
@@ -132,7 +143,8 @@ public class Status : MonoBehaviour {
             }
             if (onFire > 0)
             {
-                onFire -= dt;
+                if (!inFire) onFire -= dt;
+                else inFire = false;
                 Damage(fireDmg);
                 
             }
@@ -163,6 +175,7 @@ public class Status : MonoBehaviour {
 
     public void Burn(float damage, float duration)
     {
+        inFire = true;
         onFire = duration;
         fireDmg = damage;
     }

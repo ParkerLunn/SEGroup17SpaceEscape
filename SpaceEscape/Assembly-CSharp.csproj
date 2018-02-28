@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{21BD5E8F-84F2-04F2-696E-AF40D765006E}</ProjectGuid>
+    <ProjectGuid>{8F77EE67-8C11-459E-BF40-8DB46270F113}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -63,12 +63,8 @@
      <Compile Include="Assets\unitmx\Code\TileSet.cs" />
      <None Include="Assets\unitmx\Example Assets\ExMapPadEx.xml" />
      <None Include="Assets\unitmx\Example Assets\ExMap.xml" />
-     <None Include="Assets\Tilesets_RAW\Tile1.xml" />
-     <None Include="Assets\Tilesets_RAW\tile4.xml" />
-     <None Include="Assets\Tilesets_RAW\Tile3.xml" />
-     <None Include="Assets\Tilesets_RAW\Tile2.xml" />
  <Reference Include="Facebook.Unity.Settings">
- <HintPath>C:/Users/Chris/Documents/GitHub/SpaceEscapeRoot/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+ <HintPath>C:/Users/Chris/Documents/GitHub/SEGroup17SpaceEscape/SpaceEscape/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>
  <Reference Include="Vuforia.UnityExtensions.Editor">
  <HintPath>E:/Tools/Unity/Editor/Data/PlaybackEngines/VuforiaSupport/Managed/Editor/Vuforia.UnityExtensions.Editor.dll</HintPath>

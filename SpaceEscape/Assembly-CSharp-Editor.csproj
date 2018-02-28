@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{6D833E7B-1261-0796-1A44-C1A590F87F42}</ProjectGuid>
+    <ProjectGuid>{6B7EDC06-92D7-E25D-FE47-D61A6A160F89}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -53,7 +53,7 @@
   <ItemGroup>
      <Compile Include="Assets\unitmx\Editor\TileMapEditor.cs" />
  <Reference Include="Facebook.Unity.Settings">
- <HintPath>C:/Users/Chris/Documents/GitHub/SpaceEscapeRoot/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+ <HintPath>C:/Users/Chris/Documents/GitHub/SEGroup17SpaceEscape/SpaceEscape/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>
  <Reference Include="Vuforia.UnityExtensions.Editor">
  <HintPath>E:/Tools/Unity/Editor/Data/PlaybackEngines/VuforiaSupport/Managed/Editor/Vuforia.UnityExtensions.Editor.dll</HintPath>
@@ -178,7 +178,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{21BD5E8F-84F2-04F2-696E-AF40D765006E}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+      <Project>{8F77EE67-8C11-459E-BF40-8DB46270F113}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
