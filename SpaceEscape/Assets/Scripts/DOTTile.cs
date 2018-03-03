@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class DOTTile : MonoBehaviour {
 
-    void OnTriggerStay2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         Status status = other.gameObject.GetComponent("Status") as Status;
-        status.Burn(.2f, 0.3f);
+        status.DOT(gameObject, 2, -1);
+    }
+    void OnTriggerExit2D(Collider2D other)
+    {
+        Status status = other.gameObject.GetComponent("Status") as Status;
+        status.DisableContinuousEffect(gameObject, 2);
     }
 }

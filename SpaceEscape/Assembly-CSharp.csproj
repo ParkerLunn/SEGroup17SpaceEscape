@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\HazardTile.cs" />
      <Compile Include="Assets\Scripts\HealTile.cs" />
      <Compile Include="Assets\Scripts\IceTile.cs" />
+     <Compile Include="Assets\Scripts\Inventory.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Status.cs" />
      <Compile Include="Assets\Scripts\WaterTile.cs" />

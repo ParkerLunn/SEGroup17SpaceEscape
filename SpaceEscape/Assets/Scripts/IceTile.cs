@@ -4,17 +4,12 @@ using UnityEngine;
 
 public class IceTile : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-
-    // Update is called once per frame
- /*   void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
+        other.sharedMaterial.friction = other.sharedMaterial.friction * 0.1f;
     }
     void OnTriggerExit2D(Collider2D other)
     {
-        Rigidbody2D rb = other.gameObject.GetComponent <Rigidbody2D>();
-    }*/
+        other.sharedMaterial.friction = other.sharedMaterial.friction * 10f;
+    }
 }

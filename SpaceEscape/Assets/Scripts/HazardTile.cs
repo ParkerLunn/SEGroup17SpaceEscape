@@ -21,6 +21,6 @@ public class HazardTile : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         Status status = other.gameObject.GetComponent("Status") as Status;
-        status.Damage(10f);
+        status.Damage(gameObject, 10);
     }
 }

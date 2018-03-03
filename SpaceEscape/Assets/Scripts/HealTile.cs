@@ -5,9 +5,14 @@ using UnityEngine;
 public class HealTile : MonoBehaviour
 {
 
-    void OnTriggerStay2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         Status status = other.gameObject.GetComponent("Status") as Status;
-        status.Burn(-0.5f, 0.3f);
+        status.DOT(gameObject, -2f, -1);
+    }
+    void OnTriggerExit2D(Collider2D other)
+    {
+        Status status = other.gameObject.GetComponent("Status") as Status;
+        status.DisableContinuousEffect(gameObject, 2);
     }
 }

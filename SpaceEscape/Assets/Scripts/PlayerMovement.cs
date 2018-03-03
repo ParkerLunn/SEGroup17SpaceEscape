@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
     private Rigidbody2D rb2D;
-    public Status status;
+    Status status;
 
-    private float speed;
-    private Vector2 movement;
+    float speed;
+    Vector2 movement;
 
     // Use this for initialization
     protected virtual void Start()
@@ -18,11 +18,13 @@ public class PlayerMovement : MonoBehaviour {
         status = GetComponent("Status") as Status;
 
         //set the player's inherent speed
-        speed = 50.0f;
+        speed = 320.0f;
     }
 
 
     // Update is called once per frame
+    // Applies force to RigidBody2D based on current inputs, inherent speed,
+    // and speedc modifier.
     void Update()
     {
         

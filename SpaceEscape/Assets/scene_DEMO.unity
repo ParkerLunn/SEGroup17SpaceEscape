@@ -1495,6 +1495,11 @@ Prefab:
       propertyPath: m_Size.y
       value: 0.95
       objectReference: {fileID: 0}
+    - target: {fileID: 50502870310818286, guid: 88285ee3cb03087469253febb1542010,
+        type: 2}
+      propertyPath: m_SleepingMode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 88285ee3cb03087469253febb1542010, type: 2}
