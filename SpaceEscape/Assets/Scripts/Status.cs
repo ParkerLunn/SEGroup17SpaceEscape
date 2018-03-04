@@ -16,7 +16,6 @@ public class Status : MonoBehaviour {
     bool alive;
     float hp;
     int maxHp;
-    int hpMonitor;
 
     List<float> speed;
     float speedCache;
@@ -107,7 +106,7 @@ public class Status : MonoBehaviour {
         effects.Add(new Effect(source, "hp", damage * -1, 0, false, false));
     }
     //reduce HP by damagepersecond DPS over duration seconds.
-    public void DOT(GameObject source, float damagePerSecond, float duration)
+    public void DamageOverTime(GameObject source, float damagePerSecond, float duration)
     {
         bool isCont = (duration <= 0) ? true : false;
         effects.Add(new Effect(source, "hpot", damagePerSecond * -1, duration, true, isCont));
@@ -158,6 +157,7 @@ public class Status : MonoBehaviour {
         {
             if (e.source.Equals(source))
             {
+                result = e;
                 return result;
             }
         }
@@ -176,31 +176,34 @@ public class Status : MonoBehaviour {
         return result;
     }
 
-    //updates the value in the speed cache. returns 1 if accurate to speed.
+    //updates the value in the speed cache. returns true if accurate to speed.
     bool UpdateSpeed()
     {
-        speedCache = 1;
+        bool ret = true;
+        float fl = 1;
         if (speed.Count > 0)
         {
             foreach (float s in speed)
             {
-                speedCache = speedCache * s;
+                fl = fl * s;
             }
         }
-        if (speedCache > speedMax)
+        if (fl > speedMax)
         {
             Debug.Log("ATTN:\tspeed is too high!");
-            speedCache = speedMax;
-            return false;
+            fl = speedMax;
+            ret = false;
         }
-        if (speedCache < speedMin)
+        if (fl < speedMin)
         {
             Debug.Log("ATTN:\tspeed is too low!");
-            speedCache = speedMin;
-            return false;
+            fl = speedMin;
+            ret = false;
         }
-        if (frozen > 0) speedCache = 0;
-        return true;
+        if (frozen > 0) fl = 0;
+        speedCache = fl;
+        GetComponent<Rigidbody2D>().drag = 10 / speedCache;
+        return ret;
     }
 
     void Start()
@@ -209,13 +212,12 @@ public class Status : MonoBehaviour {
         speed = new List<float>();
 
         speedMax = 4;
-        speedMin = 0.25f;
+        speedMin = 0.1f;
         speedCache = 1;
 
         maxHp = 100;
         hp = maxHp;
         alive = true;
-        hpMonitor = 0;
 
         petrify = 0;
         frozen = 0;
@@ -229,26 +231,6 @@ public class Status : MonoBehaviour {
         lastInterval += Time.deltaTime;
         if (lastInterval > updateInterval)
         {
-            //debug HP monitoring
-            if (hpMonitor != Hp)
-            {
-                Debug.Log("HP: " + Hp + '/' + maxHp);
-                hpMonitor = Hp;
-            }
-
-            if (Hp <= 0)
-
-            {
-                if (alive == true)
-                {
-                    Debug.Log("HP is 0!");
-                    hp = 0;
-                    alive = false;
-                }
-            }
-
-
-
             for (int i = 0; i < effects.Count; i++)
             {
                 switch (effects[i].name)
@@ -278,6 +260,12 @@ public class Status : MonoBehaviour {
                                 }
                                 //otherwise remove the effect after applying.
                                 else effects.RemoveAt(i);
+                            }
+
+                            if (alive && Hp == 0)
+                            {
+                                alive = false;
+                                hp = 0;
                             }
                             break;
                         }
@@ -367,7 +355,6 @@ public class Effect
     }
     public void Print()
     {
-
         if (!printed)
         {
             Debug.Log("PRINTOUT FOR EFFECT \"" + name + "\"" +

@@ -51,13 +51,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Script.cs" />
      <Compile Include="Assets\Scripts\DOTTile.cs" />
      <Compile Include="Assets\Scripts\HazardTile.cs" />
      <Compile Include="Assets\Scripts\HealTile.cs" />
      <Compile Include="Assets\Scripts\IceTile.cs" />
      <Compile Include="Assets\Scripts\Inventory.cs" />
+     <Compile Include="Assets\Scripts\Key.cs" />
+     <Compile Include="Assets\Scripts\LockObj.cs" />
+     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Status.cs" />
+     <Compile Include="Assets\Scripts\Switch.cs" />
+     <Compile Include="Assets\Scripts\Target.cs" />
      <Compile Include="Assets\Scripts\WaterTile.cs" />
      <Compile Include="Assets\unitmx\Code\Layer.cs" />
      <Compile Include="Assets\unitmx\Code\TileMap.cs" />

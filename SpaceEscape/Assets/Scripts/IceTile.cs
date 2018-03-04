@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class IceTile : MonoBehaviour {
-
+    float holdval;
     void OnTriggerEnter2D(Collider2D other)
     {
-        other.sharedMaterial.friction = other.sharedMaterial.friction * 0.1f;
+        
     }
     void OnTriggerExit2D(Collider2D other)
     {
-        other.sharedMaterial.friction = other.sharedMaterial.friction * 10f;
+        other.GetComponent<Rigidbody2D>().inertia = holdval;
     }
 }
