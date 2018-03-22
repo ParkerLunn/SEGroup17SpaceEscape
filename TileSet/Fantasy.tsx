@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tileset name="Fantasy" tilewidth="16" tileheight="16" tilecount="256" columns="16">
- <image source="../SEGroup17SpaceEscape-Map/TileSet/0x72_16x16DungeonTileset.v4.png" width="256" height="256"/>
+ <image source="0x72_16x16DungeonTileset.v4.png" width="256" height="256"/>
  <tile id="182">
   <objectgroup draworder="index">
    <object id="1" x="7.33333" y="5.66667" width="9" height="10.6667"/>
