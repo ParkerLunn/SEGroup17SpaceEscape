@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tileset name="SciFiClear" tilewidth="16" tileheight="16" tilecount="1326" columns="34">
- <image source="../SEGroup17SpaceEscape-Map/TileSet/schifi2.png" width="548" height="638"/>
+ <image source="../../../../Desktop/SciFiClear.png" width="548" height="638"/>
  <tile id="277">
   <objectgroup draworder="index">
    <object id="1" x="0" y="-0.333333" width="15.6667" height="15.6667"/>
