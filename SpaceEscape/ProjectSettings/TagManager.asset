@@ -21,13 +21,13 @@ TagManager:
   - Floor
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - "\e"
+  - '"'
+  - )
+  - 0
+  - 7
+  - '>'
+  - Player
   - 
   - 
   - 
@@ -42,18 +42,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Floor
-    uniqueID: 4233921863
-    locked: 0
-  - name: Wall
-    uniqueID: 3956959335
-    locked: 0
-  - name: Objects
-    uniqueID: 4034779971
-    locked: 0
-  - name: Door
-    uniqueID: 3766204149
-    locked: 0
-  - name: Player
-    uniqueID: 2218175529
+  - name: 
+    uniqueID: 1747892575
     locked: 0
