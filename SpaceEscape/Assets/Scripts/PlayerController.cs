@@ -9,13 +9,13 @@ public class PlayerController : MonoBehaviour {
 
     private bool facingRight;
     private SpriteRenderer spriteRenderer;
-    private Animator animator;
+    //private Animator animator;
 
 	// Use this for initialization
 	void Start () {
         facingRight = true;
         rigidbody = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
+        //animator = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour {
 
         Vector2 movement = new Vector2(moveHorizontal, moveVertical);
         rigidbody.AddForce(movement * moveSpeed);
-        animator.SetFloat("moveSpeed", movement.magnitude);
+        //animator.SetFloat("moveSpeed", movement.magnitude);
         Flip(moveHorizontal);
 	}
 
