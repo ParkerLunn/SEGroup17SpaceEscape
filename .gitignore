@@ -34,4 +34,8 @@ sysinfo.txt
 *.unitypackage
 
 **/SpaceEscape/Library/**
+<<<<<<< HEAD
 **/SpaceEscape/Temp/**
+=======
+**/SpaceEscape/Temp/**
+>>>>>>> AddedCleanSEUnityProj
