@@ -4,7 +4,11 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 14
+<<<<<<< HEAD
   productGUID: 91761e94bfc75d5458ec3b246b83f4f4
+=======
+  productGUID: 6c514ba63b287f64195ce97695e25e06
+>>>>>>> origin/AddedCleanSEUnityProj
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   defaultScreenOrientation: 4
@@ -12,7 +16,11 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
+<<<<<<< HEAD
   productName: Map
+=======
+  productName: SpaceEscape
+>>>>>>> origin/AddedCleanSEUnityProj
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -204,7 +212,10 @@ PlayerSettings:
   tvOSSmallIconLayers: []
   tvOSSmallIconLayers2x: []
   tvOSLargeIconLayers: []
+<<<<<<< HEAD
   tvOSLargeIconLayers2x: []
+=======
+>>>>>>> origin/AddedCleanSEUnityProj
   tvOSTopShelfImageLayers: []
   tvOSTopShelfImageLayers2x: []
   tvOSTopShelfImageWideLayers: []
@@ -549,12 +560,16 @@ PlayerSettings:
   webGLUseEmbeddedResources: 0
   webGLUseWasm: 0
   webGLCompressionFormat: 1
+<<<<<<< HEAD
   scriptingDefineSymbols:
     1: CROSS_PLATFORM_INPUT
     4: CROSS_PLATFORM_INPUT;MOBILE_INPUT
     7: CROSS_PLATFORM_INPUT;MOBILE_INPUT
     14: MOBILE_INPUT
     20: MOBILE_INPUT
+=======
+  scriptingDefineSymbols: {}
+>>>>>>> origin/AddedCleanSEUnityProj
   platformArchitecture: {}
   scriptingBackend: {}
   incrementalIl2cppBuild: {}
@@ -563,14 +578,22 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
+<<<<<<< HEAD
   metroPackageName: Map
+=======
+  metroPackageName: SpaceEscape
+>>>>>>> origin/AddedCleanSEUnityProj
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
+<<<<<<< HEAD
   metroApplicationDescription: Map
+=======
+  metroApplicationDescription: SpaceEscape
+>>>>>>> origin/AddedCleanSEUnityProj
   wsaImages: {}
   metroTileShortName: 
   metroCommandLineArgsFile: 
@@ -635,6 +658,7 @@ PlayerSettings:
     daydream:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
+<<<<<<< HEAD
   cloudServicesEnabled:
     UNet: 1
   facebookSdkVersion: 7.9.4
@@ -642,6 +666,14 @@ PlayerSettings:
   cloudProjectId: f7ebb5ca-0b42-4038-9925-1275a735c6d9
   projectName: Map
   organizationId: danilo-souza-b1bdae93-36c3-49d7-a59f-34a56e29c36a
+=======
+  cloudServicesEnabled: {}
+  facebookSdkVersion: 7.9.4
+  apiCompatibilityLevel: 2
+  cloudProjectId: 
+  projectName: 
+  organizationId: 
+>>>>>>> origin/AddedCleanSEUnityProj
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
