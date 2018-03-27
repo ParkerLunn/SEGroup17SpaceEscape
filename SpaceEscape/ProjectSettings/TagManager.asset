@@ -14,20 +14,20 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - Wall
   - Floor
+  - Wall
+  - Door
   - 
   - 
-  - "\e"
-  - '"'
-  - )
-  - 0
-  - 7
-  - '>'
+  - 
+  - 
   - Player
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -42,6 +42,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: 
+  - name: Floor
     uniqueID: 1747892575
+    locked: 0
+  - name: Wall
+    uniqueID: 4263457039
+    locked: 0
+  - name: Objects
+    uniqueID: 2658302949
+    locked: 0
+  - name: Door
+    uniqueID: 145976049
+    locked: 0
+  - name: Player
+    uniqueID: 165871565
     locked: 0
