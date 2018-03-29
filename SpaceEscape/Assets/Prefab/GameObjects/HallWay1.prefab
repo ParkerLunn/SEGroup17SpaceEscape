@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 50261633411792442}
   - component: {fileID: 66794030309705030}
   - component: {fileID: 2113883507172503106}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Hall1Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
