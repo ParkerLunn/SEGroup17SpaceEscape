@@ -14,14 +14,14 @@ TagManager:
   - UI
   - 
   - 
-  - Floor
-  - Wall
-  - Door
   - 
   - 
   - 
   - 
-  - Player
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -42,21 +42,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: BackGround
-    uniqueID: 865103479
-    locked: 0
-  - name: Floor
+  - name: Environment
     uniqueID: 1747892575
-    locked: 0
-  - name: Wall
-    uniqueID: 4263457039
     locked: 0
   - name: Objects
     uniqueID: 2658302949
     locked: 0
-  - name: Door
-    uniqueID: 145976049
-    locked: 0
-  - name: Player
+  - name: Characters
     uniqueID: 165871565
     locked: 0
