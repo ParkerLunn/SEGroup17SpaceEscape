@@ -28,14 +28,14 @@ public class Inventory : MonoBehaviour {
 		//		isActive = true;
 	}
 	void Update(){
-		//		if (Input.GetKeyDown ("i") && isInventoryOpen == false) {
-		//			Debug.Log ("inventory open");
-		//			isInventoryOpen = true;
-		//
-		//		} else if (Input.GetKeyDown ("i") && isInventoryOpen == true) {
-		//			Debug.Log ("inventory close");
-		//			isInventoryOpen = false;
-		//		}
+				if (Input.GetKeyDown ("i") && isInventoryOpen == false) {
+					Debug.Log ("inventory open");
+					isInventoryOpen = true;
+
+				} else if (Input.GetKeyDown ("i") && isInventoryOpen == true) {
+					Debug.Log ("inventory close");
+					isInventoryOpen = false;
+				}
 	}
 
 	private InventorySlot FindStackableItem(ItemBaseClass item){
