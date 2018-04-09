@@ -9,6 +9,7 @@ public class Inventory : MonoBehaviour {
 
 	public event EventHandler<InventoryEventArgs> ItemAdded;
 	public event EventHandler<InventoryEventArgs> ItemRemoved;
+	public event EventHandler<InventoryEventArgs> ItemUsed;
 	//public GameObject inventory; 
 	public bool isActive;
 
@@ -100,6 +101,12 @@ public class Inventory : MonoBehaviour {
 			}
 		}
 
+	}
+
+	public void UseItem(ItemBaseClass item){
+		if (ItemUsed != null) {
+			ItemUsed (this, new InventoryEventArgs (item));
+		}
 	}
 }
 

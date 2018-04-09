@@ -6,6 +6,8 @@ public class PlayerController : MonoBehaviour {
 
     public float moveSpeed;
     private Rigidbody2D rigidbody;
+	public SpriteRenderer weapon;
+	public Inventory inventory;
 
     private bool facingRight;
     private SpriteRenderer spriteRenderer;
@@ -15,6 +17,7 @@ public class PlayerController : MonoBehaviour {
 	void Start () {
         facingRight = true;
         rigidbody = GetComponent<Rigidbody2D>();
+		inventory.ItemUsed += Inventory_ItemUsed;
         //animator = GetComponent<Animator>();
 	}
 	
@@ -39,4 +42,9 @@ public class PlayerController : MonoBehaviour {
             transform.localScale = scale;
         }
     }
+
+	private void Inventory_ItemUsed(object sender, InventoryEventArgs e){
+		ItemBaseClass item = e.Item;
+		weapon.sprite = item.Image;
+	}
 }
