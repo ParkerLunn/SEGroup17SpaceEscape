@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Fire
+  - Switch
   layers:
   - Default
   - TransparentFX
@@ -14,8 +15,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Player
+  - CrateEdge
   - 
   - 
   - 
@@ -44,6 +45,12 @@ TagManager:
     locked: 0
   - name: Environment
     uniqueID: 1747892575
+    locked: 0
+  - name: SwitchOff
+    uniqueID: 2470489071
+    locked: 0
+  - name: Environment2
+    uniqueID: 4260549683
     locked: 0
   - name: Objects
     uniqueID: 2658302949
