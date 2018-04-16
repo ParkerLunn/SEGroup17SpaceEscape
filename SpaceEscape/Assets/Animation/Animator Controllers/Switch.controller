@@ -13,7 +13,7 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 1
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -81,8 +81,8 @@ AnimatorState:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Switch disabled
-  m_Speed: 0
+  m_Name: Switch Activated
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101946472979638280}
@@ -95,7 +95,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 00ce7fe6f1d4a0042a4d32f240434688, type: 2}
+  m_Motion: {fileID: 7400000, guid: 6adcde3c20a3420418b5d0077beb5c0a, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -107,8 +107,8 @@ AnimatorState:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Switch active
-  m_Speed: 0
+  m_Name: Switch Not Activated
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101859137619685310}
@@ -121,7 +121,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 9af75108f8a8afa41a3c27101408c3ab, type: 2}
+  m_Motion: {fileID: 7400000, guid: 329d945baaeccb24ea5846168c389601, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -137,7 +137,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1102641423894657484}
-    m_Position: {x: 240, y: 60, z: 0}
+    m_Position: {x: 240, y: 36, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102372332358425614}
     m_Position: {x: 264, y: 132, z: 0}
