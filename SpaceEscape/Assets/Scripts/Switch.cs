@@ -15,6 +15,7 @@ public class Switch : MonoBehaviour {
         rb2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         activated = false;
+        animator.SetBool("active", activated);
         timer = -1;
 	}
 	
@@ -27,7 +28,7 @@ public class Switch : MonoBehaviour {
         if (other.gameObject.CompareTag("Player"))
         {
             myLock.Unlock();
-            activated = false;
+            activated = true;
             animator.SetBool("active", activated);
         }
     }

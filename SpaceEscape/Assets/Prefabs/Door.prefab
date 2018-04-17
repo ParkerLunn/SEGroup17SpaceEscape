@@ -167,8 +167,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locked: 0
-  doorOpenSound: {fileID: 0}
-  doorCloseSound: {fileID: 0}
+  doorOpenSound: {fileID: 8300000, guid: e3212f519e34b7043ab8041f2a9ccfe0, type: 3}
+  doorCloseSound: {fileID: 8300000, guid: 0fb11932676f9de44ad8acf6ed331327, type: 3}
 --- !u!212 &212391180484170708
 SpriteRenderer:
   m_ObjectHideFlags: 1

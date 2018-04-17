@@ -18,6 +18,7 @@ public class ToggleSwitch : MonoBehaviour {
         animator = GetComponent<Animator>();
         activated = false;
         timer = -1;
+        animator.SetBool("active", activated);
     }
 
     // Update is called once per frame
@@ -29,8 +30,8 @@ public class ToggleSwitch : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            myLock.Toggle();
             activated = !activated;
+            myLock.Toggle();
             animator.SetBool("active", activated);
         }
     }
