@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
-    public float moveSpeed;
     private Rigidbody2D rigidbody;
+    Entity player;
 
 
     private bool facingRight;
@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour {
     void Start () {
         facingRight = true;
         rigidbody = GetComponent<Rigidbody2D>();
+        player = GetComponent<Entity>();
 
         //animator = GetComponent<Animator>();
 	}
@@ -26,7 +27,7 @@ public class PlayerController : MonoBehaviour {
         float moveVertical = Input.GetAxis("Vertical");
 
         Vector2 movement = new Vector2(moveHorizontal, moveVertical);
-        rigidbody.AddForce(movement * moveSpeed);
+        rigidbody.AddForce(movement * player.moveSpeed);
         //animator.SetFloat("moveSpeed", movement.magnitude);
         Flip(moveHorizontal);
 	}

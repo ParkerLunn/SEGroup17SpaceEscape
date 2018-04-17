@@ -6,6 +6,7 @@ public class Entity : MonoBehaviour {
 
     float health = 100f;
     float maxHealth = 100f;
+    public float moveSpeed;
 
     GameObject entity;
 
@@ -27,7 +28,7 @@ public class Entity : MonoBehaviour {
 		
 	}
 
-    public void modifyHealth(float modifier) {
+    public void ModifyHealth(float modifier) {
         health = health + modifier;
         if(IsMaxHealthExceeded())
         {
@@ -57,6 +58,11 @@ public class Entity : MonoBehaviour {
 
     private void Die () {
         Destroy(entity);
+    }
+
+    public void ModifySpeed(float modifier)
+    {
+        moveSpeed += modifier;
     }
 
     private void Inventory_ItemUsed(object sender, InventoryEventArgs e)
