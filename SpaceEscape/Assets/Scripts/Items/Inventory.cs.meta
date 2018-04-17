@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+<<<<<<< HEAD
+guid: 5758472b268c0442b8472e7f49be84e7
+timeCreated: 1519849230
+=======
+guid: 3830bb4025807b44cbec154c15788ef6
+timeCreated: 1519892166
+>>>>>>> upstream/Inventory
+licenseType: Free
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
