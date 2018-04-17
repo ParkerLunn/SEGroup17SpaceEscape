@@ -29,23 +29,23 @@ public class Entity : MonoBehaviour {
 
     public void modifyHealth(float modifier) {
         health = health + modifier;
-        if(isMaxHealthExceeded())
+        if(IsMaxHealthExceeded())
         {
             health = maxHealth;
         }
         else if(!isAlive())
         {
-            die();
+            Die();
         }
 
     }
 
-    public void modifyMaxHealth(float modifier)
+    public void ModifyMaxHealth(float modifier)
     {
         maxHealth += modifier;
     }
 
-    private bool isMaxHealthExceeded()
+    private bool IsMaxHealthExceeded()
     {
         return health > maxHealth;
     }
@@ -55,7 +55,7 @@ public class Entity : MonoBehaviour {
         return health > 0f;
     }
 
-    private void die () {
+    private void Die () {
         Destroy(entity);
     }
 
