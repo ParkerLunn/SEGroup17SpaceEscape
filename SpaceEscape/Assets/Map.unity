@@ -4985,6 +4985,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114276429369440528, guid: d86cd2496bd49c242a96efb36165e40b,
+        type: 2}
+      propertyPath: Lock
+      value: 
+      objectReference: {fileID: 1269197634}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d86cd2496bd49c242a96efb36165e40b, type: 2}
   m_IsPrefabParent: 0
@@ -7669,6 +7674,31 @@ Transform:
   m_Father: {fileID: 31152365}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1063899957 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1022225566033408, guid: cfacce5e3bf54e64da3bedf8c5947407,
+    type: 2}
+  m_PrefabInternal: {fileID: 1921742352}
+--- !u!50 &1063899959
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1063899957}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1094549530
 GameObject:
   m_ObjectHideFlags: 0
@@ -8388,6 +8418,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1243100105}
+--- !u!1 &1269197634 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1658055926688632, guid: 5779cc4a748704542b33b995c20bc50c,
+    type: 2}
+  m_PrefabInternal: {fileID: 397718812}
 --- !u!1 &1270115969
 GameObject:
   m_ObjectHideFlags: 0
@@ -12392,13 +12427,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 31152365}
     m_Modifications:
-    - target: {fileID: 66755846866431288, guid: cfacce5e3bf54e64da3bedf8c5947407,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_ColliderPaths.Array.size
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 66755846866431288, guid: cfacce5e3bf54e64da3bedf8c5947407,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_CompositePaths.m_Paths.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -12617,7 +12650,7 @@ Prefab:
         type: 3}
     m_RemovedComponents:
     - {fileID: 2113883506107477108, guid: cfacce5e3bf54e64da3bedf8c5947407, type: 2}
-    - {fileID: 66755846866431288, guid: cfacce5e3bf54e64da3bedf8c5947407, type: 2}
+    - {fileID: 0}
     - {fileID: 50467245179500944, guid: cfacce5e3bf54e64da3bedf8c5947407, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: cfacce5e3bf54e64da3bedf8c5947407, type: 2}
   m_IsPrefabParent: 0
