@@ -12,6 +12,7 @@ public class Inventory : MonoBehaviour {
 	public event EventHandler<InventoryEventArgs> ItemUsed;
 	//public GameObject inventory; 
 	public bool isActive;
+    public bool pickup;
 
 	private const int SLOTS = 9;
 	private bool isInventoryOpen = false;
@@ -25,8 +26,9 @@ public class Inventory : MonoBehaviour {
 
 
 	void Start(){
-		//		inventory.SetActive(true);
-		//		isActive = true;
+        //		inventory.SetActive(true);
+        //		isActive = true;
+        pickup = false;
 	}
 	void Update(){
 				if (Input.GetKeyDown ("i") && isInventoryOpen == false) {
@@ -62,6 +64,7 @@ public class Inventory : MonoBehaviour {
 
 	public void AddItem(ItemBaseClass item){
 		//Debug.Log ("ADDDDDD");
+
 		item.pickupItem ();
 		InventorySlot newSlot = FindStackableItem (item);
 		if (newSlot == null) {
@@ -76,20 +79,21 @@ public class Inventory : MonoBehaviour {
 				ItemAdded (this, new InventoryEventArgs (item));
 			}
 		}
-		//		if (mItems.Count < SLOTS)
-		//		{
-		//			Collider2D collider = (item as MonoBehaviour).GetComponent<Collider2D> ();
-		//			if (collider.enabled) {
-		//				collider.enabled = false;
-		//				mItems.Add (item);
-		//				item.pickupItem ();
-		//
-		//				if (item != null) {
-		//					ItemAdded (this, new InventoryEventArgs (item));
-		//				}
-		//			}
-		//		}
-	}
+        //		if (mItems.Count < SLOTS)
+        //		{
+        //			Collider2D collider = (item as MonoBehaviour).GetComponent<Collider2D> ();
+        //			if (collider.enabled) {
+        //				collider.enabled = false;
+        //				mItems.Add (item);
+        //				item.pickupItem ();
+        //
+        //				if (item != null) {
+        //					ItemAdded (this, new InventoryEventArgs (item));
+        //				}
+        //			}
+        //		}
+        pickup = true;
+    }
 
 	public void RemoveItem(ItemBaseClass item){
 		foreach (InventorySlot slot in mSlots) {
