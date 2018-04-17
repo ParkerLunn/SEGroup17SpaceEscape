@@ -32,8 +32,7 @@ public class LockObj : MonoBehaviour
             locked = false;
             GetComponent<Collider2D>().enabled = locked;
             animator.SetBool("locked", locked);
-            audioSource.clip = doorOpenSound;
-            audioSource.Play();
+            audioSource.PlayOneShot(doorOpenSound, 0.25f);
         }
 
     }
@@ -45,8 +44,7 @@ public class LockObj : MonoBehaviour
             locked = true;
             GetComponent<Collider2D>().enabled = locked;
             animator.SetBool("locked", locked);
-            audioSource.clip = doorCloseSound;
-            audioSource.Play();
+            audioSource.PlayOneShot(doorCloseSound, 0.25f);
         }
     }
     public void Toggle()

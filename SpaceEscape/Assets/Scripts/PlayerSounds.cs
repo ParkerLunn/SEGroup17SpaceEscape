@@ -32,7 +32,7 @@ public class PlayerSounds : MonoBehaviour {
 
     private void Inventory_ItemAdded(object sender, InventoryEventArgs e)
     {
-        audioSource.PlayOneShot(s_getItem);
+        audioSource.PlayOneShot(s_getItem, 0.15f);
         //throw new System.NotImplementedException();
     }
 
@@ -47,7 +47,7 @@ public class PlayerSounds : MonoBehaviour {
                 float f = Mathf.Abs(rb2d.velocity.x) + 
                     Mathf.Abs(rb2d.velocity.y);
                 if (f > 0.1)
-                    audioSource.PlayOneShot(s_step, 0.5f);
+                    audioSource.PlayOneShot(s_step, 0.2f);
             }
             else
                 dinterval -= Time.deltaTime;

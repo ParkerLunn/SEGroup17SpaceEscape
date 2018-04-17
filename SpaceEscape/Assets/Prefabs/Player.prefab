@@ -241,7 +241,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -253,7 +253,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -265,7 +265,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!114 &114160365548523816
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -277,11 +277,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42ad3d713a058614da00c807e411cc24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 0}
+  inventory: {fileID: 0}
   interval: 0
   dinterval: 0
   audioSource: {fileID: 0}
-  audioClip: {fileID: 0}
+  s_step: {fileID: 0}
+  s_getItem: {fileID: 0}
   rb2d: {fileID: 0}
 --- !u!114 &114383022895833638
 MonoBehaviour:
