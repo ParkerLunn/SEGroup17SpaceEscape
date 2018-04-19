@@ -5,14 +5,18 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
 public class Save{
-    public static List<Game> saves = new List<Game>();
+    //public static List<Game> saves = new List<Game>();
 
-	public static void SaveGame()
+	public void SaveGame(SavableStats stats)
     {
-        saves.Add(GameObject.current);
+        savePlayer(stats);
+    }
+
+    private void savePlayer(SavableStats stats)
+    {
         BinaryFormatter bf = new BinaryFormatter();
-        FileStream file = File.Create(Application.persistentDataPath + "/savedGames.spe");
-        bf.Serialize(file, saves);
+        FileStream file = File.Create(Application.persistentDataPath + "/playerStats.dat");
+        bf.Serialize(file, stats);
         file.Close();
     }
 }
