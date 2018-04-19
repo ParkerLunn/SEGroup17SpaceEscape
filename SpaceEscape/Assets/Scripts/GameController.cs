@@ -34,7 +34,6 @@ public class GameController : MonoBehaviour {
     public void LoadGame()
     {
         load.LoadGame();
-        print(playerStats.loaded);
         print("Load complete!");
     }
 

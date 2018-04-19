@@ -33,7 +33,6 @@ public class PlayerStats : MonoBehaviour {
     public void setPosition()
     {
         gameObject.transform.position = sStats.getPosition();
-        print(sStats.getPosition());
     }
 }
 
