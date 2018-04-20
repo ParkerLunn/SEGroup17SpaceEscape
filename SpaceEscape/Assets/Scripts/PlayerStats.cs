@@ -11,9 +11,8 @@ public class PlayerStats : MonoBehaviour {
     private float positionX, positionY, positionZ;
 
 	// Use this for initialization
-	void Awake () {
+	void Start () {
         sStats = new SavableStats();
-        GameController.getInstance().setStats(sStats);
 	}
 	
 	// Update is called once per frame
@@ -42,6 +41,7 @@ public class SavableStats
     [SerializeField]
     private float positionX, positionY, positionZ;
 
+    [NonSerialized]
     public Boolean loaded;
 
     public void updatePosition(float x, float y, float z)

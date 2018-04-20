@@ -6,7 +6,6 @@ public class GameController : MonoBehaviour {
     private static GameController current;
     private Save save = new Save();
     private Load load = new Load();
-    private SavableStats playerStats;
 	
 	void Awake () {
 		if(current == null)
@@ -27,7 +26,7 @@ public class GameController : MonoBehaviour {
 
     public void SaveGame()
     {
-        save.SaveGame(playerStats);
+        save.SaveGame();
         print("Save complete!");
     }
 
@@ -35,10 +34,5 @@ public class GameController : MonoBehaviour {
     {
         load.LoadGame();
         print("Load complete!");
-    }
-
-    public void setStats(SavableStats stats)
-    {
-        playerStats = stats;
     }
 }
