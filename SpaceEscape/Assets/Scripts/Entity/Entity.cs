@@ -8,7 +8,7 @@ public class Entity : MonoBehaviour {
     float maxHealth = 100f;
     public float moveSpeed;
 
-    GameObject entity;
+    public GameObject entity;
 
     public SpriteRenderer weapon;
     public Inventory inventory;
@@ -19,14 +19,21 @@ public class Entity : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        entity = GetComponent<GameObject>();
+
+        //entity = GetComponent<GameObject>();
         inventory.ItemUsed += Inventory_ItemUsed;
+
     }
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        if (Input.GetKey(KeyCode.Space))
+        {
+            DestroyObject(entity);
+            Destroy(entity);
+            DestroyImmediate(entity);
+        }
+    }
 
     public void ModifyHealth(float modifier) {
         health = health + modifier;
@@ -36,10 +43,13 @@ public class Entity : MonoBehaviour {
         }
         else if(!isAlive())
         {
-            Die();
+            DestroyObject(entity);
+            Destroy(entity);
+            DestroyImmediate(entity);
         }
 
     }
+
 
     public void ModifyMaxHealth(float modifier)
     {
@@ -56,7 +66,7 @@ public class Entity : MonoBehaviour {
         return health > 0f;
     }
 
-    private void Die () {
+    public void Die () {
         Destroy(entity);
     }
 

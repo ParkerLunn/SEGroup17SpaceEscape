@@ -13,7 +13,8 @@ public class HostileAI : MonoBehaviour {
 
     private Seeker seeker;
     private Rigidbody2D rb;
-
+    private CircleCollider2D cc;
+    private CircleCollider2D targetCollider;
     public Path path;
 
     public float speed = 2f;
@@ -31,7 +32,8 @@ public class HostileAI : MonoBehaviour {
 	void Start () {
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
-
+        cc = GetComponent<CircleCollider2D>();
+        targetCollider = target.GetComponent<CircleCollider2D>();
         if(target == null)
         {
             if(!searchingForPlayer)
@@ -92,6 +94,10 @@ public class HostileAI : MonoBehaviour {
     }
 	
 	void FixedUpdate () {
+        if (cc.IsTouching(targetCollider))
+        {
+           target.GetComponent<Entity>().Die();
+        }
         if (target == null)
         {
             if (!searchingForPlayer)
