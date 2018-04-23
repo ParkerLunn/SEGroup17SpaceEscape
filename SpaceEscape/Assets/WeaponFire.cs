@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WeaponFire : MonoBehaviour {
 
-    public float damage = 100;
+    public float damage = 50;
     public float projectileSpeed;
     public float rateOfFire = 0;
     float timeToSpawnEffect = 0;
@@ -55,6 +55,13 @@ public class WeaponFire : MonoBehaviour {
                 //projectile.Shoot(firePoint);
             }
         }
+    }
+
+    public void UpdateWeapon(float damage, float fireRate, bool equipped)
+    {
+        this.rateOfFire = fireRate;
+        this.damage = damage;
+        weaponEquipped = equipped;
     }
 
     void Shoot()

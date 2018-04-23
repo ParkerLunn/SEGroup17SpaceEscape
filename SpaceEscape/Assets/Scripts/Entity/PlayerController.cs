@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour {
 
     private Rigidbody2D rigidbody;
     Entity player;
+    public SpriteRenderer weapon;
 
 
     private bool facingRight;
@@ -41,5 +42,26 @@ public class PlayerController : MonoBehaviour {
             scale.x *= -1;
             transform.localScale = scale;
         }
+    }
+
+    void Inventory_ItemUsed(object sender, InventoryEventArgs e)
+    {
+        ItemBaseClass item = e.Item;
+        weapon.sprite = item.Image;
+        GameObject player = GameObject.Find("Player");
+        WeaponFire Wp = player.GetComponent<WeaponFire>();
+        Debug.Log(item.Name + " equipped");
+        if (item.name.Equals("Pistol"))
+        {
+            Debug.Log("pistol equipped");
+            Wp.UpdateWeapon(50,0,true);
+        }
+        if (item.name.Equals("MiniGun"))
+        {
+            Debug.Log("minigun equipped");
+            Wp.UpdateWeapon(5, 10, true);
+        }
+        else
+            Wp.UpdateWeapon(0, 0, false);
     }
 }
