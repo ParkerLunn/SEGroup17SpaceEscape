@@ -7,7 +7,7 @@ public class PlayerHealth : MonoBehaviour {
 
     public GameObject player;
     Status status;
-    int hpMonitor;
+    float hpMonitor;
     public Text output;
 
     // Use this for initialization

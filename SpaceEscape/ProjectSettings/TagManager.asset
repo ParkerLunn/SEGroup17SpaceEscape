@@ -52,3 +52,6 @@ TagManager:
   - name: Characters
     uniqueID: 165871565
     locked: 0
+  - name: BulletTrail
+    uniqueID: 3608662975
+    locked: 0

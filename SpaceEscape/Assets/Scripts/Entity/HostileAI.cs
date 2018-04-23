@@ -30,6 +30,7 @@ public class HostileAI : MonoBehaviour {
     private bool searchingForPlayer = false;
 
 	void Start () {
+        target = GameObject.Find("Player").GetComponent<Transform>();
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
         cc = GetComponent<CircleCollider2D>();

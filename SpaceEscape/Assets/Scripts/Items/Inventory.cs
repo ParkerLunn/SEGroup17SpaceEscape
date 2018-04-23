@@ -16,7 +16,7 @@ public class Inventory : MonoBehaviour {
 
 	private const int SLOTS = 9;
 	private bool isInventoryOpen = false;
-	private IList<InventorySlot> mSlots = new List<InventorySlot> ();
+	public List<InventorySlot> mSlots = new List<InventorySlot> ();
 
 	public Inventory(){
 		for (int i = 0; i < SLOTS; i++) {

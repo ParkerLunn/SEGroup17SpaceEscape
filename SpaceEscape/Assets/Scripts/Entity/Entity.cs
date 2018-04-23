@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Entity : MonoBehaviour {
 
-    float health;
-    float maxHealth = 100f;
+    public float health;
+    public float maxHealth = 100f;
     public float moveSpeed;
 
     public GameObject entity;
