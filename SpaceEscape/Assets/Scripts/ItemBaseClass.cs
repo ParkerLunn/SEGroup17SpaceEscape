@@ -74,7 +74,13 @@ public class ItemBaseClass:InteractableItemBaseClass{
 			gameObject.transform.position = hit.point; 
 		}
 	}
-	
+
+    public virtual void setActive()
+    {
+        //		Destroy(gameObject.GetComponents<RigidbodyConstraints2D>());
+        gameObject.SetActive(true);
+    }
+
 }
 
 

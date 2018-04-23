@@ -9,7 +9,7 @@ public class Load{
     public void LoadGame()
     {
         loadPlayer();
-		loadPuzzle ();
+		loadPuzzle();
 	//	loadInventory ();
     }
 
@@ -30,6 +30,7 @@ public class Load{
 		FileStream file = File.Open(Application.persistentDataPath + "/savePuzzles.dat", FileMode.Open);
 		SavePuzzles.sPuzzles = (SavablePuzzles)bf.Deserialize(file);
 		SavePuzzles.sPuzzles.loaded = true;
+        GameController.getInstance().getInactive().setActive();
 
 		file.Close();
 	}

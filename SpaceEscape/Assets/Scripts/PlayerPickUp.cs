@@ -8,7 +8,8 @@ public class PlayerPickUp : MonoBehaviour {
 
 	private void OnTriggerEnter2D(Collider2D other){ 
 		InteractableItemBaseClass item = other.GetComponent<InteractableItemBaseClass> (); //sets var item into object player ran into
-		if (item != null) { 
+		if (item != null) {
+            GameController.getInstance().setInactive(item as ItemBaseClass);
 			inventory.AddItem (item as ItemBaseClass); // adds item into inventory 
 			Debug.Log ("Adding: " + item);
 		}
