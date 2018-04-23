@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Entity : MonoBehaviour {
 
-    float health = 100f;
+    float health;
     float maxHealth = 100f;
     public float moveSpeed;
 
@@ -19,7 +19,7 @@ public class Entity : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-
+        health = 100f;
         //entity = GetComponent<GameObject>();
         inventory.ItemUsed += Inventory_ItemUsed;
 

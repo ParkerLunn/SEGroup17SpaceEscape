@@ -4,18 +4,22 @@ using UnityEngine;
 
 public class WeaponFire : MonoBehaviour {
 
-    public float damage = 10;
+    public float damage = 100;
     public float projectileSpeed;
     public float rateOfFire = 0;
     public LayerMask objectsToDamage;
+    
 
     private Transform firePoint;
-    float timeToFire = 0;
+    private float timeToFire = 0;
+    public bool weaponEquipped;
+    private GameObject player;
 
     ShootProjectile projectile;
 
     void Awake()
     {
+        weaponEquipped = false;
         firePoint = transform.Find("weaponFP");
         //GameObject weapon = GetComponent<GameObject>();
         //GameObject child = Helper.FindComponentInChildWithTag(weapon, "FiringPoint");
@@ -26,13 +30,15 @@ public class WeaponFire : MonoBehaviour {
 
     void Update()
     {
+        //if()
         //Shoot();
         if (rateOfFire == 0)
         {
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 //projectile.Shoot(firePoint);
-                Shoot();
+                if(weaponEquipped)
+                    Shoot();
             }
         }
         else
@@ -40,7 +46,8 @@ public class WeaponFire : MonoBehaviour {
             if (Input.GetKey(KeyCode.Mouse0) && Time.time > rateOfFire)
             {
                 timeToFire = Time.time + 1 / rateOfFire;
-                Shoot();
+                if (weaponEquipped)
+                    Shoot();
                 //projectile.Shoot(firePoint);
             }
         }
@@ -59,7 +66,7 @@ public class WeaponFire : MonoBehaviour {
         }
         if (hit.collider.name.Equals("Enemy"))
         {
-            Debug.Log("enemy hit");
+            hit.collider.GetComponent<Entity>().ModifyHealth(-damage);
         }
     }
 

@@ -11,7 +11,7 @@ public class ItemDrag : MonoBehaviour, IDragHandler, IEndDragHandler {
 	}
 
 	public void OnEndDrag(PointerEventData eventData){
-		transform.localPosition = Vector3.zero;
+		transform.localPosition = Vector2.zero;
 	}
 	
 

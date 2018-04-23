@@ -437,7 +437,7 @@ GameObject:
   - component: {fileID: 34899322}
   - component: {fileID: 34899321}
   m_Layer: 0
-  m_Name: Gun
+  m_Name: MiniGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -449,7 +449,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 34899320}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1c8a0bfefb15046e1b545d8d88b4c41b, type: 3}
   m_Name: 
@@ -1277,7 +1277,7 @@ GameObject:
   m_Component:
   - component: {fileID: 209216289}
   m_Layer: 0
-  m_Name: FiringPoint
+  m_Name: MGFiringPoint
   m_TagString: FiringPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3180,7 +3180,7 @@ GameObject:
   - component: {fileID: 439183298}
   - component: {fileID: 439183297}
   m_Layer: 0
-  m_Name: Gun (1)
+  m_Name: Pistol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3192,7 +3192,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 439183296}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1c8a0bfefb15046e1b545d8d88b4c41b, type: 3}
   m_Name: 
@@ -6363,7 +6363,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4065264459175414, guid: b74209af8539ae44eb0b9c0592421905, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 4.647815
+      value: 4.46
       objectReference: {fileID: 0}
     - target: {fileID: 4065264459175414, guid: b74209af8539ae44eb0b9c0592421905, type: 2}
       propertyPath: m_LocalPosition.z
@@ -6408,6 +6408,21 @@ Prefab:
       propertyPath: target
       value: 
       objectReference: {fileID: 8686258}
+    - target: {fileID: 58941399725172556, guid: b74209af8539ae44eb0b9c0592421905,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: 0.063240655
+      objectReference: {fileID: 0}
+    - target: {fileID: 58941399725172556, guid: b74209af8539ae44eb0b9c0592421905,
+        type: 2}
+      propertyPath: m_Radius
+      value: 0.2638315
+      objectReference: {fileID: 0}
+    - target: {fileID: 58941399725172556, guid: b74209af8539ae44eb0b9c0592421905,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: -0.052085094
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b74209af8539ae44eb0b9c0592421905, type: 2}
   m_IsPrefabParent: 0
@@ -7836,34 +7851,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!1 &1064458206
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1064458207}
-  m_Layer: 0
-  m_Name: FiringPoint (1)
-  m_TagString: FiringPoint
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1064458207
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1064458206}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -49.937786, y: -17.16436, z: 58.06021}
-  m_LocalScale: {x: 20.735802, y: 20.735788, z: 29.030106}
-  m_Children: []
-  m_Father: {fileID: 1886916615}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1094549530
 GameObject:
   m_ObjectHideFlags: 0
@@ -8716,6 +8703,26 @@ Transform:
   m_PrefabParentObject: {fileID: 4472322577387072, guid: ca6b1b6a6dec65143a552c96d998d39b,
     type: 2}
   m_PrefabInternal: {fileID: 797007100}
+--- !u!1 &1279965665 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1865083553498274, guid: b74209af8539ae44eb0b9c0592421905,
+    type: 2}
+  m_PrefabInternal: {fileID: 752849706}
+--- !u!114 &1279965672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1279965665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05a43d2b516a0024dbc5e336d00a929c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0
+  entity: {fileID: 1279965665}
+  weapon: {fileID: 0}
+  inventory: {fileID: 0}
 --- !u!1001 &1333690220
 Prefab:
   m_ObjectHideFlags: 0
@@ -11862,6 +11869,34 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1739520956}
+--- !u!1 &1741110603
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1741110604}
+  m_Layer: 0
+  m_Name: weaponFP
+  m_TagString: FiringPoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1741110604
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1741110603}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.9, y: 0.4, z: 58.06021}
+  m_LocalScale: {x: 20.735802, y: 20.735788, z: 29.030106}
+  m_Children: []
+  m_Father: {fileID: 1886916615}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1753581202
 GameObject:
   m_ObjectHideFlags: 0
@@ -12608,7 +12643,7 @@ Transform:
   m_LocalPosition: {x: 0.32, y: -0, z: 0}
   m_LocalScale: {x: 0.034446973, y: 0.034447, z: 0.034447}
   m_Children:
-  - {fileID: 1064458207}
+  - {fileID: 1741110604}
   m_Father: {fileID: 8686258}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12623,15 +12658,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c50e4907aa1fc347b29582e2f93199b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 50
   projectileSpeed: 0
   rateOfFire: 0
   objectsToDamage:
     serializedVersion: 2
-    m_Bits: 0
-  notToHit:
-    serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1536
 --- !u!1 &1896755048
 GameObject:
   m_ObjectHideFlags: 0
@@ -12641,7 +12673,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1896755049}
   m_Layer: 0
-  m_Name: FiringPoint (1)
+  m_Name: PistolFP
   m_TagString: FiringPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12891,6 +12923,10 @@ Prefab:
     - target: {fileID: 1104243579371778, guid: cfacce5e3bf54e64da3bedf8c5947407, type: 2}
       propertyPath: m_Layer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1629855526402722, guid: cfacce5e3bf54e64da3bedf8c5947407, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2113883506107477108, guid: cfacce5e3bf54e64da3bedf8c5947407, type: 2}

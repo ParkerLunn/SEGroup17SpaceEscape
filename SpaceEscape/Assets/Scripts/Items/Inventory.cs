@@ -12,6 +12,7 @@ public class Inventory : MonoBehaviour {
 	public event EventHandler<InventoryEventArgs> ItemUsed;
 	//public GameObject inventory; 
 	public bool isActive;
+    public bool isEquipped= false;
 
 	private const int SLOTS = 9;
 	private bool isInventoryOpen = false;
@@ -106,6 +107,9 @@ public class Inventory : MonoBehaviour {
 	public void UseItem(ItemBaseClass item){
 		if (ItemUsed != null) {
 			ItemUsed (this, new InventoryEventArgs (item));
+            GameObject.Find("Player").GetComponentInChildren<WeaponFire>().weaponEquipped = true;
+            //isEquipped = true;
+            Debug.Log("weapon equipped");
 		}
 	}
 }
