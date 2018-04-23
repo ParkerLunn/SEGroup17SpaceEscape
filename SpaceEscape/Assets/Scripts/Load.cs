@@ -5,9 +5,12 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
 public class Load{
+
     public void LoadGame()
     {
         loadPlayer();
+		loadPuzzle ();
+	//	loadInventory ();
     }
 
     private void loadPlayer()
@@ -15,8 +18,19 @@ public class Load{
         BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Open(Application.persistentDataPath + "/playerStats.dat", FileMode.Open);
         PlayerStats.sStats = (SavableStats)bf.Deserialize(file);
-        PlayerStats.sStats.loaded = true;
+		PlayerStats.sStats.loaded = true;
+
 
         file.Close();
     }	
+
+	private void loadPuzzle()
+	{
+		BinaryFormatter bf = new BinaryFormatter();
+		FileStream file = File.Open(Application.persistentDataPath + "/savePuzzles.dat", FileMode.Open);
+		SavePuzzles.sPuzzles = (SavablePuzzles)bf.Deserialize(file);
+		SavePuzzles.sPuzzles.loaded = true;
+
+		file.Close();
+	}
 }

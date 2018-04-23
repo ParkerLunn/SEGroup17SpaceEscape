@@ -7,9 +7,13 @@ using System.Runtime.Serialization.Formatters.Binary;
 public class Save{
     //public static List<Game> saves = new List<Game>();
 
+
 	public void SaveGame()
     {
         savePlayer();
+		savePuzzle();
+
+		//saveInventory ();
     }
 
     private void savePlayer()
@@ -19,4 +23,12 @@ public class Save{
         bf.Serialize(file, PlayerStats.sStats);
         file.Close();
     }
+
+	void savePuzzle()
+	{
+		BinaryFormatter bf = new BinaryFormatter();
+		FileStream file = File.Create(Application.persistentDataPath + "/savePuzzles.dat");
+		bf.Serialize(file, SavePuzzles.sPuzzles);
+		file.Close ();
+	}
 }
