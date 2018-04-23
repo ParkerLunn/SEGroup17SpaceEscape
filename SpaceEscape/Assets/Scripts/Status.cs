@@ -12,10 +12,10 @@ public class Status : MonoBehaviour {
     float lastInterval;
 
     List<Effect> effects;
-
+    Entity playerEntity = GameObject.Find("Player").GetComponent<Entity>();
     bool alive;
     float hp;
-    int maxHp;
+    float maxHp;
 
     List<float> speed;
     float speedCache;
@@ -24,11 +24,11 @@ public class Status : MonoBehaviour {
     float petrify;
     float frozen;
 
-    public int MaxHp
+    public float MaxHp
     {
         get
         {
-            return maxHp;
+            return playerEntity.maxHealth;
         }
 
         set
@@ -45,11 +45,11 @@ public class Status : MonoBehaviour {
         }
     }
 
-    public int Hp
+    public float Hp
     {
         get
         {
-            return (int)hp;
+            return playerEntity.health;
         }
 
         set

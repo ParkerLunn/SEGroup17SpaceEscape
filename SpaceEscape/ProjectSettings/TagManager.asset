@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Fire
   - Switch
+  - FiringPoint
   layers:
   - Default
   - TransparentFX
@@ -17,6 +18,8 @@ TagManager:
   - 
   - Player
   - CrateEdge
+  - Enemy
+  - Environment
   - 
   - 
   - 
@@ -57,4 +60,7 @@ TagManager:
     locked: 0
   - name: Characters
     uniqueID: 165871565
+    locked: 0
+  - name: BulletTrail
+    uniqueID: 3608662975
     locked: 0
