@@ -27,12 +27,7 @@ public class Entity : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKey(KeyCode.Space))
-        {
-            DestroyObject(entity);
-            Destroy(entity);
-            DestroyImmediate(entity);
-        }
+
     }
 
     public void ModifyHealth(float modifier) {
