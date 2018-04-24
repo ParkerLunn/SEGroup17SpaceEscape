@@ -19,7 +19,7 @@ public class Entity : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        health = 100f;
+        health = maxHealth;
         //entity = GetComponent<GameObject>();
         inventory.ItemUsed += Inventory_ItemUsed;
 
