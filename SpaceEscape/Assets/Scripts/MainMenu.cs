@@ -14,7 +14,7 @@ public class MainMenu : MonoBehaviour {
 
 	public void LoadGame() 
 	{
-		//Put code to load last save state in here
+		Application.LoadLevel (loadGame);
 	}
 
 	public void QuitGame() 

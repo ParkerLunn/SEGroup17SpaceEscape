@@ -8,6 +8,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Title_Menu.unity
     guid: 9dad014e5f1e9496cbf11cd7789edb58
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Map.unity
-    guid: 06b4f5396fce9054ea20421ec556a8cc
+    path: Assets/Scenes/Demo.unity
+    guid: d3bc581dfc3a3404b9ac5c84b20e4b5a
+  - enabled: 1
+    path: Assets/Scenes/Puzzle Room.unity
+    guid: 23fed4f9c53454434bd530c0b45896dd
+  - enabled: 1
+    path: Assets/TScene.unity
+    guid: 58bbd586304c2e44296f34e5afbb4cf6
