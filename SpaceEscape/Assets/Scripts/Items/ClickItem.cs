@@ -33,7 +33,7 @@ public class ClickItem : MonoBehaviour {
                 Debug.Log("weapon null");
             else
                 Debug.Log("minigun equipped");
-            Wp.rateOfFire = 10;
+            Wp.rateOfFire = 20;
             Wp.damage = 5;
             Wp.weaponEquipped = true;
         }

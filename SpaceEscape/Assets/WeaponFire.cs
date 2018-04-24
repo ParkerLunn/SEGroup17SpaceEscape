@@ -8,7 +8,7 @@ public class WeaponFire : MonoBehaviour {
     public float projectileSpeed;
     public float rateOfFire = 0;
     float timeToSpawnEffect = 0;
-    public float effectSpawnRate = 5;
+    public float effectSpawnRate = 50;
     public LayerMask objectsToDamage;
 
     public Transform BulletTrailPrefab;
